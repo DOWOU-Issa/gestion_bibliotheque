@@ -1,0 +1,206 @@
+/* ===== Fond général ===== */
+body {
+  background: url('../images/catalogue.gif') no-repeat center center fixed;
+  background-size: cover;
+}
+
+
+/* ===== Barre supérieure ===== */
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  background-color: rgba(30, 30, 47, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 20px;
+  z-index: 1000;
+}
+
+.settings {
+  position: relative;
+}
+
+.settings-btn {
+  font-size: 1.4em;
+  background: none;
+  border: none;
+  color: #f0f0f0;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 40px;
+  background-color: #2c2f3e;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  min-width: 160px;
+  z-index: 1001;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  color: #f0f0f0;
+  text-decoration: none;
+  font-size: 0.95em;
+}
+
+.dropdown-content a:hover {
+  background-color: #0dcaf0;
+  color: #1e1e2f;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* ===== Sidebar ===== */
+.sidebar {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  width: 220px;
+  height: calc(100% - 50px);
+  background-color: rgba(44, 47, 62, 0.95);
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+}
+
+.sidebar h2 {
+  font-size: 1.2em;
+  color: #0dcaf0;
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 12px;
+}
+
+.sidebar a {
+  color: #f0f0f0;
+  text-decoration: none;
+  font-size: 0.95em;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+  color: #0dcaf0;
+}
+
+/* ===== Contenu principal ===== */
+.catalogue-wrapper {
+  margin-left: 240px; /* espace pour la sidebar */
+  padding-top: 80px;
+  padding-right: 20px;
+}
+
+.catalogue-card {
+  background-color: rgba(30, 30, 47, 0.9);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  margin-bottom: 30px;
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+}
+
+.catalogue-card h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #0dcaf0;
+}
+
+/* ===== Barre de recherche ===== */
+.search-bar {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: none;
+  font-size: 1em;
+  background-color: #1e1e2f;
+  color: #f0f0f0;
+  box-shadow: 0 0 4px rgba(0,0,0,0.3);
+}
+.search-bar::placeholder {
+  color: #aaa;
+}
+
+/* ===== Tableau ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+thead {
+  background-color: #1e1e2f;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #444;
+}
+
+th {
+  color: #0dcaf0;
+  font-weight: bold;
+}
+
+td {
+  color: #f0f0f0;
+}
+
+/* Effet hover sur les lignes */
+tbody tr:hover {
+  background-color: rgba(255,255,255,0.05);
+}
+
+/* Alternance de lignes */
+tbody tr:nth-child(even) {
+  background-color: rgba(255,255,255,0.02);
+}
+
+/* ===== Boutons ===== */
+.btn {
+  padding: 6px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.9em;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.primary {
+  background-color: #0dcaf0;
+  color: #1e1e2f;
+}
+
+.warning {
+  background-color: #ffc107;
+  color: #1e1e2f;
+}
+
+.disabled {
+  background-color: #6c757d;
+  color: #fff;
+  cursor: not-allowed;
+}
+
+.muted {
+  color: #aaa;
+  font-size: 0.9em;
+}

@@ -1,0 +1,73 @@
+/* ===== Styles spécifiques à la page Infos ===== */
+
+body {
+  font-family: 'Roboto', 'Times New Roman', serif;
+  background-color: #f8f8f8;
+  color: #333;
+  line-height: 1.6;
+}
+
+header.header {
+  background: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  padding: 15px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+header.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header.header .logo h2 {
+  font-size: 1.6em;
+  color: #0dcaf0;
+}
+
+header.header .nav {
+  display: flex;
+  gap: 20px;
+}
+
+header.header .nav-link {
+  color: #f0f0f0;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+header.header .nav-link:hover,
+header.header .nav-link.active {
+  color: #0dcaf0;
+}
+
+section.infos {
+  padding: 100px 20px 60px; /* espace sous le header */
+  background-color: #fff;
+  color: #333;
+}
+
+section.infos h2 {
+  font-size: 2em;
+  margin-bottom: 30px;
+  color: #0077cc;
+  text-align: center;
+}
+
+section.infos h3 {
+  font-size: 1.3em;
+  margin-top: 20px;
+  color: #0dcaf0;
+}
+
+section.infos ul {
+  list-style: disc;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}

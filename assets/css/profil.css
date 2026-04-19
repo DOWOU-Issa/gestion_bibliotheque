@@ -1,0 +1,186 @@
+/* ===== Fond général ===== */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: url('../images/profil.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #f0f0f0;
+  min-height: 100vh;
+}
+
+/* ===== Barre supérieure ===== */
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  background-color: rgba(30, 30, 47, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 1000;
+}
+
+.back-arrow {
+  font-size: 1.5em;
+  color: #f0f0f0;
+  text-decoration: none;
+}
+
+.settings {
+  position: relative;
+}
+
+.settings-btn {
+  font-size: 1.4em;
+  background: none;
+  border: none;
+  color: #f0f0f0;
+  cursor: pointer;
+}
+
+/* Dropdown menu */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 40px;
+  background-color: #2c2f3e;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  min-width: 160px;
+  z-index: 1001;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  color: #f0f0f0;
+  text-decoration: none;
+  font-size: 0.95em;
+}
+
+.dropdown-content a:hover {
+  background-color: #0dcaf0;
+  color: #1e1e2f;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* ===== Carte profil centrée ===== */
+.profil-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 80px;
+}
+
+.profil-card {
+  background-color: rgba(44, 47, 62, 0.95);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.4);
+  width: 100%;
+  max-width: 500px;
+}
+
+.profil-card h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #0e0f0f;
+
+}
+
+/* ===== Alertes ===== */
+.alert {
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.alert.error {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.alert.success {
+  background-color: #198754;
+  color: #fff;
+}
+
+/* ===== Photo de profil ===== */
+.photo-section {
+  position: relative;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profil-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid #ccc;
+  object-fit: cover;
+}
+
+/* Bouton 📷 discret en bas */
+.btn-upload {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #444;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 6px 8px;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+
+
+/* ===== Formulaire ===== */
+.profil-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.profil-form label {
+  margin-top: 10px;
+  font-size: 0.9em;
+  color: #ccc;
+}
+
+.profil-form input {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  margin-top: 5px;
+  background: #1e1e2f;
+  color: #f0f0f0;
+}
+
+.profil-form input:focus {
+  outline: 2px solid #0dcaf0;
+}
+
+.btn-submit {
+  margin-top: 20px;
+  background: #0dcaf0;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #1e1e2f;
+}
+
+.btn-submit:hover {
+  background: #0bb2d4;
+}

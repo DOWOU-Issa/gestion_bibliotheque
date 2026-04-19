@@ -1,0 +1,191 @@
+/* ===== Reset & base ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', 'Times New Roman', serif;
+  background-color: #f8f8f8;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===== Header ===== */
+.header {
+  background: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  padding: 15px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo h2 {
+  font-size: 1.6em;
+  color: #0dcaf0;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  color: #f0f0f0;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #0dcaf0;
+}
+
+/* ===== Section ajout utilisateur ===== */
+.ajout-user {
+  padding: 120px 20px 60px; /* espace sous le header */
+  background-color: #fff;
+}
+
+.ajout-user h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #0077cc;
+  text-align: center;
+}
+
+/* ===== Formulaire ===== */
+.ajout-user form {
+  background: #f8f8f8;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.1);
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
+
+.ajout-user label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.ajout-user input,
+.ajout-user select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1em;
+}
+
+.ajout-user button {
+  width: 100%;
+  padding: 12px;
+  background-color: #0dcaf0;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.ajout-user button:hover {
+  background-color: #0077cc;
+  transform: scale(1.05);
+}
+
+/* ===== Tableau historique ===== */
+.ajout-user table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.ajout-user table th,
+.ajout-user table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+}
+
+.ajout-user table th {
+  background-color: #0077cc;
+  color: #fff;
+}
+
+.ajout-user table tr:nth-child(even) {
+  background-color: #f8f8f8;
+}
+
+.ajout-user table tr:hover {
+  background-color: #eaf4ff;
+}
+
+/* ===== Bouton supprimer ===== */
+.ajout-user a {
+  color: #dc3545;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.ajout-user a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Alertes ===== */
+.alert {
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.alert-danger {
+  background-color: #f8d7da;
+  color: #842029;
+}
+
+.alert-success {
+  background-color: #d1e7dd;
+  color: #0f5132;
+}
+.topbar-back {
+  background: rgba(0, 0, 0, 0.85);
+  padding: 12px 20px;
+  text-align: left;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  margin-bottom: 30px;
+}
+
+.topbar-link {
+  color: #0dcaf0;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.topbar-link:hover {
+  color: #fff;
+}
+
