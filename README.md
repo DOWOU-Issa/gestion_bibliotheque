@@ -23,6 +23,7 @@ Application web de gestion d'une bibliotheque universitaire developpee en PHP/My
 
 - `public/` : pages d'entree (accueil, login, dashboard, infos, contact)
 - `config/` : connexion base de donnees
+- `database/` : scripts SQL (`schema.sql` et `seed.sql`)
 - `includes/` : fonctions utilitaires et composants communs
 - `utilisateurs/` : inscription, profil, gestion utilisateurs
 - `livres/` : CRUD livres
@@ -34,10 +35,17 @@ Application web de gestion d'une bibliotheque universitaire developpee en PHP/My
 ## Installation locale (WAMP/XAMPP)
 
 1. Copier le projet dans le dossier web local (ex: `www/gestion_bibliotheque`).
-2. Creer une base de donnees `gestion_bibliotheque`.
-3. Creer les tables necessaires (adherent, livre, emprunt, categorie, etc.) selon votre schema.
-4. Creer le fichier `config/config.php` avec vos identifiants locaux (exemple de connexion PDO ci-dessous).
+2. Importer `database/schema.sql` pour creer la structure.
+3. Importer `database/seed.sql` (optionnel) pour charger des donnees de demonstration.
+4. Mettre a jour `config/config.php` avec vos identifiants locaux.
 5. Ouvrir `http://localhost/gestion_bibliotheque/public/index.php`.
+
+Import rapide en ligne de commande:
+
+```bash
+mysql -u root -p < database/schema.sql
+mysql -u root -p < database/seed.sql
+```
 
 Exemple minimal de configuration PDO:
 
@@ -66,10 +74,18 @@ Valeurs attendues:
 - `bibliothecaire`
 - `admin`
 
+Comptes de demonstration (si `database/seed.sql` est importe):
+
+- `admin@example.com` (role: `admin`)
+- `biblio@example.com` (role: `bibliothecaire`)
+- `adherent@example.com` (role: `adherent`)
+- Mot de passe pour les 3 comptes: `password`
+
 ## Notes importantes
 
 - Le projet contient des ressources locales (images de profils, css/js, etc.).
-- Le schema SQL n'est pas versionne dans ce depot.
+- Le schema SQL est versionne dans `database/schema.sql`.
+- Les donnees de demonstration sont dans `database/seed.sql`.
 - Pour un usage public, ne versionnez jamais de mots de passe ou credentials reels.
 
 ## Licence
